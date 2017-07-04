@@ -12,7 +12,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.service.UserService;
 
 @Controller
-
 public class UserController {
 	
 	@Resource
@@ -25,6 +24,9 @@ public class UserController {
 		String writeValueAsString = om.writeValueAsString(user);
 		return writeValueAsString;
 	}
-
+	@RequestMapping("/index")
+	public String toIndex(){
+		return "index";
+	}
 }
 
